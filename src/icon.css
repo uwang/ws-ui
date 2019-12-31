@@ -9,3 +9,38 @@
 /* 字体图标，依赖font-awesome */
 
 @import '//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+/* 让图标变成一个正方形且水平竖直居中的 */
+
+.fa {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+/* 自定义图标样式 */
+
+.fa-code {
+  color: red;
+}
+
+.fa-info {
+  background: #666;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.fa-check {
+  display: block;
+  margin: 0 auto;
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  background: #09BB07;
+  color: #fff;
+}
