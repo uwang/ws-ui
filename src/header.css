@@ -1,4 +1,5 @@
 .ws-header {
+  display: flex;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -7,4 +8,26 @@
   max-width: 640px;
   height: 2.3rem;
   border-bottom: 1px solid #ddd;
+  background: #f8f8f8;
+  text-align: center;
+  line-height: 2.3rem;
+}
+
+.ws-header>.left {
+  flex-basis: 3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ws-header>.title {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ws-header>.right {
+  flex-basis: 3rem;
+  text-align: center;
+  flex-shrink: 0;
 }

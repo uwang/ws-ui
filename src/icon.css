@@ -13,10 +13,6 @@
 /* 让图标变成一个正方形且水平竖直居中的 */
 
 .fa {
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1.2rem;
   text-align: center;
 }
 
