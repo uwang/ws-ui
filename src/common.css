@@ -5,6 +5,31 @@ html {
 }
 
 
+/* 手机端样式 */
+
+body {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  /* 在 ios 系统上，可以让滚动元素带有弹性，滚动的更顺滑。 */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* 页面蒙版 */
+
+.ws-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, .5);
+}
+
+
 /* 屏幕宽度大于340px且小于410px时，基准尺寸使用20px */
 
 @media (min-width: 340px) and (max-width: 410px) {

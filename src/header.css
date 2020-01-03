@@ -1,0 +1,10 @@
+.ws-header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  max-width: 640px;
+  height: 2.3rem;
+  border-bottom: 1px solid #ddd;
+}
