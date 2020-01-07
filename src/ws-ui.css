@@ -33,3 +33,7 @@
 /* 表单样式 */
 
 @import './form.css';
+
+/* 按钮样式 */
+
+@import './button.css';
