@@ -29,3 +29,7 @@
 /* 导航条样式 */
 
 @import './navbar.css';
+
+/* 表单样式 */
+
+@import './form.css';

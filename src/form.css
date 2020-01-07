@@ -1,0 +1,100 @@
+.ws-form-item {
+  display: flex;
+  position: relative;
+  padding-left: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.ws-form-item:last-child {
+  border-bottom: none;
+}
+
+.ws-form-item .ws-form-label {
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: .8rem;
+  color: #666;
+}
+
+.ws-form-item .ws-form-body {
+  flex: 1;
+}
+
+.ws-form-item>.ws-form-body>.ws-input {
+  width: 100%;
+  border: none;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: .8rem;
+}
+
+.ws-form-item>.ws-form-body>.ws-input-reset {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: .8rem;
+  height: .8rem;
+  line-height: .8rem;
+  margin-top: -.4em;
+  font-size: .6rem;
+  background: #aaa;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.ws-form-item>.ws-form-body>.ws-input-warning {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: .8rem;
+  height: .8rem;
+  line-height: .8rem;
+  margin-top: -.4em;
+  font-size: .6rem;
+  color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+
+/* 单选框样式 */
+
+.ws-radio, .ws-check {
+  flex: 1;
+  font-size: .8rem;
+  line-height: 2rem;
+}
+
+.ws-radio-icon {
+  margin-right: .5rem;
+  color: #09BB07;
+  visibility: hidden;
+}
+
+.checked>.ws-radio-icon {
+  visibility: visible;
+}
+
+.ws-radio-input, .ws-check-input {
+  position: absolute;
+  left: -999rem;
+}
+
+.ws-check-icon {
+  margin-right: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0);
+  font-size: .6rem;
+  width: .8rem;
+  height: .8rem;
+  line-height: .8rem;
+}
+
+.checked>.ws-check-icon {
+  background: #09BB07;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单元素</title>
+    <link rel="stylesheet" href="../src/ws-ui.css">
+</head>
+
+<body>
+    <div class="ws-content">
+        <h1 class="ws-panel-title">Panel标题：</h1>
+        <div class="ws-panel-body">Panel内容区</div>
+
+        <h1 class="ws-panel-title">基本输入框：</h1>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-form-item">
+                <label for="username" class="ws-form-label">用户名</label>
+                <div class="ws-form-body">
+                    <input type="text" class="ws-input" placeholder="请输入姓名">
+                    <!-- <i class="fa fa-close ws-input-reset"></i> -->
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <label for="password" class="ws-form-label">密码</label>
+                <div class="ws-form-body">
+                    <input type="password" class="ws-input" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <label for="date" class="ws-form-label">日期</label>
+                <div class="ws-form-body">
+                    <input type="date" class="ws-input">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ws-panel-title">带清空功能的输入框：</h1>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-form-item">
+                <label for="phone" class="ws-form-label">手机号</label>
+                <div class="ws-form-body">
+                    <input type="text" class="ws-input" name="phone" placeholder="请输入手机号">
+                    <i class="fa fa-close ws-input-reset"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ws-panel-title">带警告提示的输入框：</h1>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-form-item">
+                <label for="email" class="ws-form-label">邮箱</label>
+                <div class="ws-form-body">
+                    <input type="text" class="ws-input" name="email" placeholder="请输入邮箱">
+                    <i class="fa fa-exclamation ws-input-warning"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ws-panel-title">单选框：</h1>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-form-item">
+                <div class="ws-radio">
+                    <i class="fa fa-check ws-radio-icon"></i>
+                    <span class="ws-radio-desc">单选选项一</span>
+                    <input type="radio" class="ws-radio-input">
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <div class="ws-radio checked">
+                    <i class="fa fa-check ws-radio-icon"></i>
+                    <span class="ws-radio-desc">单选选项二</span>
+                    <input type="radio" class="ws-radio-input">
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <div class="ws-radio">
+                    <i class="fa fa-check ws-radio-icon"></i>
+                    <span class="ws-radio-desc">单选选项三</span>
+                    <input type="radio" class="ws-radio-input">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ws-panel-title">多选框：</h1>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-form-item">
+                <div class="ws-check">
+                    <i class="fa fa-check ws-check-icon"></i>
+                    <span class="ws-check-desc">多选选项1</span>
+                    <input type="checkbox" class="ws-check-input">
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <div class="ws-check checked">
+                    <i class="fa fa-check ws-check-icon"></i>
+                    <span class="ws-check-desc">多选选项2</span>
+                    <input type="checkbox" class="ws-check-input">
+                </div>
+            </div>
+            <div class="ws-form-item">
+                <div class="ws-check checked">
+                    <i class="fa fa-check ws-check-icon"></i>
+                    <span class="ws-check-desc">多选选项3</span>
+                    <input type="checkbox" class="ws-check-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
