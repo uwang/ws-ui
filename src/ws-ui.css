@@ -37,3 +37,7 @@
 /* 按钮样式 */
 
 @import './button.css';
+
+/* 搜索样式 */
+
+@import './search.css';

@@ -1,0 +1,116 @@
+.ws-search {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+
+/* 搜索状态中，覆盖内容区 */
+
+.ws-search.on-focus {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+
+/* 通过兄弟选择器处理有标题栏的情况 */
+
+.ws-header~.ws-content .ws-search.on-focus {
+  top: 2.3rem;
+}
+
+
+/* 通过兄弟选择器处理有导航栏的情况 */
+
+.ws-navbar~.ws-content .ws-search.on-focus {
+  bottom: 2.5rem;
+}
+
+.ws-search>.ws-search-form {
+  display: flex;
+  height: 2.3rem;
+  align-items: center;
+}
+
+.ws-search>.ws-search-form>.ws-search-input-wrap {
+  flex: 1;
+  position: relative;
+  padding: 0 .5rem;
+}
+
+.ws-search>.ws-search-form>.ws-search-cancel {
+  flex: 0 0 2.2rem;
+  padding-right: .5rem;
+  text-align: center;
+  font-size: .7rem;
+  display: none;
+}
+
+.ws-search.on-focus>.ws-search-form>.ws-search-cancel {
+  display: block;
+}
+
+.ws-search .ws-search-icon {
+  position: absolute;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .7rem;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #ccc;
+}
+
+.ws-search .ws-search-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.6rem;
+  border: none;
+  font-size: .8rem;
+  padding-left: 1.5rem;
+  background: #fff;
+  border-radius: .2rem;
+}
+
+.ws-search .ws-search-clear {
+  position: absolute;
+  height: .8rem;
+  line-height: .8rem;
+  width: .8rem;
+  font-size: .6rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 1rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  display: none;
+}
+
+.ws-search.on-focus .ws-search-input:valid+.ws-search-clear {
+  display: block;
+}
+
+.ws-search>.ws-search-suggest {
+  display: none;
+}
+
+.ws-search.on-focus>.ws-search-suggest {
+  display: block;
+}
+
+.ws-search>.ws-search-suggest>.ws-suggest-item {
+  padding-left: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: .8rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
