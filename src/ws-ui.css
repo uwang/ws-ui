@@ -41,3 +41,7 @@
 /* 搜索样式 */
 
 @import './search.css';
+
+/* 列表样式 */
+
+@import './list.css';

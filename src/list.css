@@ -1,0 +1,49 @@
+.ws-list .ws-list-item {
+  display: flex;
+  position: relative;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  font-size: .8rem;
+  color: #333;
+}
+
+.ws-list .item-wrap-img {
+  flex: 0 0 5rem;
+  height: 5rem;
+  margin-right: .5rem;
+}
+
+.ws-list .item-wrap-img>img {
+  width: 100%;
+  height: 100%;
+}
+
+.ws-list .item-wrap-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ws-list .item-wrap-content>.item-title {
+  height: 2rem;
+  line-height: 1rem;
+  font-size: .8rem;
+  font-weight: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ws-list .item-wrap-content>.item-price {
+  font-size: .8rem;
+  font-weight: 600;
+  color: #e0652f;
+}
+
+.ws-list .item-wrap-content>.item-desc {
+  font-size: .6rem;
+  color: #999;
+}
