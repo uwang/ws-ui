@@ -2,6 +2,7 @@
 
 html {
   font-size: 18px;
+  height: 100%;
 }
 
 
@@ -14,6 +15,7 @@ body {
   overflow-x: hidden;
   /* 在 ios 系统上，可以让滚动元素带有弹性，滚动的更顺滑。 */
   -webkit-overflow-scrolling: touch;
+  height: 100%;
 }
 
 
