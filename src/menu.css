@@ -1,0 +1,75 @@
+.ws-menu>.ws-menu-item {
+  display: flex;
+  padding: 0 1rem;
+  height: 2.3rem;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-size: .8rem;
+}
+
+.ws-menu>.ws-menu-item>.ws-menu-name {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.ws-menu>.ws-menu-item>.ws-menu-value {
+  max-width: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.ws-menu>.ws-menu-item>.ws-menu-icon {
+  margin-left: .3rem;
+  color: #999;
+}
+
+.ws-menu>.ws-menu-item>.ws-switch {
+  position: relative;
+  box-sizing: content-box;
+  width: 2.6rem;
+  height: 1.4rem;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: .75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color .3s, border .3s;
+  /* 去掉 webkit 内核的默认样式 */
+  -webkit-appearance: none;
+  /* 去掉 webkit 内核的默认的点击效果 */
+  -webkit-tap-highlight-color: none;
+}
+
+.ws-menu>.ws-menu-item>.ws-switch:checked {
+  background-color: #07c160;
+  border-color: #07c160;
+}
+
+
+/* 使用 ::after 伪元素实现圆形按钮效果 */
+
+.ws-menu>.ws-menu-item>.ws-switch::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: .7rem;
+  background-color: #fff;
+  box-shadow: 0 0 2px #999;
+  transition: left .3s;
+}
+
+
+/* 选中状态下改变圆形按钮的位置 */
+
+.ws-menu>.ws-menu-item>.ws-switch:checked::after {
+  left: 1.2rem;
+}
