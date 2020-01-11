@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toast</title>
+    <link rel="stylesheet" href="../src/ws-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div class="ws-content">
+        <div class="ws-panel">
+            <h1 class="ws-panel-title">Toast提示组件</h1>
+            <div class="ws-panel-body">
+                <span class="ws-btn btn-primary" id="js-show-toast-loading">加载中提示</span>
+                <br/>
+                <span class="ws-btn btn-primary" id="js-show-toast-success">成功提示</span>
+            </div>
+        </div>
+    </div>
+    <div class="ws-toast" id="js-toast-loading">
+        <i class="fa fa-spinner fa-spin ws-toast-icon"></i>
+        <p class="ws-toast-info">操作进行中</p>
+    </div>
+    <div class="ws-toast" id="js-toast-success">
+        <i class="fa fa-check ws-toast-icon"></i>
+        <p class="ws-toast-info">操作成功</p>
+    </div>
+    <script>
+        $(function() {
+            $('#js-show-toast-loading').click(function() {
+                var $element = $('#js-toast-loading');
+                $element.addClass('show');
+                setTimeout(function() {
+                    $element.removeClass('show');
+                }, 2e3);
+            });
+            $('#js-show-toast-success').click(function() {
+                var $element = $('#js-toast-success');
+                $element.toggleClass('show');
+                setTimeout(function() {
+                    $element.removeClass('show');
+                }, 2e3);
+            });
+        });
+    </script>
+</body>
+
+</html>

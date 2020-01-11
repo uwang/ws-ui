@@ -61,3 +61,7 @@
 /* loading 样式 */
 
 @import './loading.css';
+
+/* toast 样式 */
+
+@import './toast.css';
