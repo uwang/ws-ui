@@ -1,0 +1,74 @@
+.ws-modal {
+  display: none;
+}
+
+.ws-modal.show {
+  display: block;
+}
+
+.ws-modal .ws-modal-wrap {
+  position: absolute;
+  width: 75%;
+  max-width: 480px;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: .4rem;
+  z-index: 301;
+}
+
+.ws-modal .ws-modal-body {
+  padding: 1.8rem .8rem 1.5rem;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+}
+
+.ws-modal .ws-modal-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.ws-modal .ws-modal-footer .ws-btn {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  font-size: .8rem;
+}
+
+.ws-modal .ws-modal-footer .ws-btn+.ws-btn {
+  border-left: 1px solid #ccc;
+}
+
+
+/* 海报模态框样式 */
+
+.ws-modal .ws-modal-body .ws-modal-img {
+  display: block;
+  width: 100%;
+  border-radius: .3rem;
+}
+
+.ws-modal .ws-modal-body.no-padding {
+  padding: 0;
+}
+
+.ws-modal .ws-modal-close {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -3rem;
+  margin: auto;
+  width: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  color: #eee;
+  font-size: .8rem;
+  font-weight: 100;
+}
