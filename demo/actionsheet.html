@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ActionSheet</title>
+    <link rel="stylesheet" href="../src/ws-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div class="ws-content">
+        <div class="ws-panel">
+            <h1 class="ws-panel-title">ActionSheet 弹出式菜单</h1>
+            <div class="ws-panel-body">
+                <span class="ws-btn btn-primary" id="js-show-action-sheet">显示弹出式菜单</span>
+            </div>
+        </div>
+    </div>
+    <div class="ws-action-sheet">
+        <div class="ws-mask"></div>
+        <div class="ws-action-sheet-wrap">
+            <div class="ws-action-sheet-header">
+                <h1 class="ws-action-sheet-title">你需要做什么操作？</h1>
+            </div>
+            <div class="ws-action-sheet-body">
+                <a class="ws-action-sheet-menu">收藏</a>
+                <a class="ws-action-sheet-menu">关注</a>
+                <a class="ws-action-sheet-menu">分享给好友</a>
+            </div>
+            <div class="ws-action-sheet-footer">
+                <a class="ws-action-sheet-menu" id="js-close">关闭</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $element = $('.ws-action-sheet');
+            $('#js-show-action-sheet').click(function() {
+                $element.addClass('show');
+            });
+
+            $('#js-close').click(function() {
+                $element.removeClass('show');
+            })
+        });
+    </script>
+</body>
+
+</html>

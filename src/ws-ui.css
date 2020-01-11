@@ -65,3 +65,7 @@
 /* toast 样式 */
 
 @import './toast.css';
+
+/* aciton sheet 样式 */
+
+@import './actionsheet.css';

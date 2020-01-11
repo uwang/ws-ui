@@ -1,0 +1,71 @@
+.ws-action-sheet>.ws-action-sheet-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform .3s ease;
+  z-index: 301;
+  background-color: #eee;
+}
+
+.ws-action-sheet.show>.ws-action-sheet-wrap {
+  transform: translateY(0%);
+}
+
+.ws-action-sheet>.ws-mask {
+  /* 默认隐藏蒙版 */
+  opacity: 0;
+  pointer-events: none;
+  /* 屏蔽鼠标点击事件 */
+  transition: opacity .3s ease;
+}
+
+.ws-action-sheet.show>.ws-mask {
+  /* 菜单弹出时显示蒙版 */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ws-action-sheet .ws-action-sheet-header {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.ws-action-sheet .ws-action-sheet-header>.ws-action-sheet-title {
+  flex: 1;
+  font-size: .7rem;
+  line-height: 1rem;
+  font-weight: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: rgba(0, 0, 0, .3);
+}
+
+.ws-action-sheet .ws-action-sheet-body {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  background-color: #fff;
+}
+
+.ws-action-sheet .ws-action-sheet-footer {
+  margin-top: .3rem;
+  background-color: #fff;
+}
+
+.ws-action-sheet .ws-action-sheet-menu {
+  display: block;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.ws-action-sheet .ws-action-sheet-menu+.ws-action-sheet-menu {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
