@@ -57,3 +57,7 @@
 /* 模态框样式 */
 
 @import './modal.css';
+
+/* loading 样式 */
+
+@import './loading.css';

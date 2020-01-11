@@ -40,3 +40,22 @@
   background: #09BB07;
   color: #fff;
 }
+
+
+/* 垂直向上的震动 */
+
+.fa-vibrate-y {
+  animation: fa-vibrate-y 1.5s infinite ease-in;
+}
+
+@keyframes fa-vibrate-y {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
