@@ -1,0 +1,21 @@
+/* 列表页样式 */
+
+.page-list .sort-wrap {
+  display: flex;
+}
+
+.page-list .sort-wrap>.sort-btn {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.page-list .sort-wrap>.sort-btn+.sort-btn {
+  border-left: 1px solid #ddd;
+}
+
+.page-list .sort-wrap>.sort-btn.active {
+  color: #09bb07;
+}

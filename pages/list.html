@@ -6,10 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>列表页</title>
+    <link rel="stylesheet" href="../dist/ws-ui.min.css">
+    <link rel="stylesheet" href="list.css">
 </head>
 
 <body class="page-list">
-    <div class="ws-content"></div>
+    <div class="ws-navbar">
+        <a href="" class="navbar-item">
+            <i class="fa fa-home icon"></i>
+            <span class="name">首页</span>
+        </a>
+        <a href="./list.html" class="navbar-item active">
+            <i class="fa fa-search icon"></i>
+            <span class="name">搜索</span>
+        </a>
+        <a href="./mine.html" class="navbar-item">
+            <i class="fa fa-user-o icon"></i>
+            <span class="name">我的</span>
+        </a>
+    </div>
+    <div class="ws-content">
+        <!-- 带suggest的搜索框 -->
+        <div class="ws-search">
+            <!-- 搜索框 -->
+            <form class="ws-search-form" action="#">
+                <div class="ws-search-input-wrap">
+                    <i class="fa fa-search ws-search-icon"></i>
+                    <input type="text" class="ws-search-input" placeholder="搜索" autocomplete="off" required/>
+                    <i class="fa fa-close ws-search-clear"></i>
+                </div>
+                <span class="ws-search-cancel">取消</span>
+            </form>
+            <!-- 搜索建议 -->
+            <ul class="ws-search-suggest">
+                <li class="ws-suggest-item">手机</li>
+                <li class="ws-suggest-item">iPhone XS Max</li>
+                <li class="ws-suggest-item">华为P30</li>
+                <li class="ws-suggest-item">小米 MIX3</li>
+                <li class="ws-suggest-item">诺基亚1110</li>
+            </ul>
+        </div>
+        <!-- 排序功能区 -->
+        <div class="sort-wrap">
+            <a class="ws-btn sort-btn active">
+            收藏次数
+            <!-- 没有排序时使用的图标 -->
+            <!-- <i class="fa fa-sort"></i> -->
+            <!-- 升序排列时使用的图标 -->
+            <!-- <i class="fa fa-sort-asc"></i> -->
+            <!-- 降序排列时使用的图标 -->
+            <i class="fa fa-sort-desc"></i>
+          </a>
+            <a class="ws-btn sort-btn">
+            发布时间
+            <i class="fa fa-sort"></i>
+          </a>
+        </div>
+        <div class="ws-panel-body no-padding">
+            <!-- 下拉 loading -->
+            <div class="ws-loading-inline">
+                <span class="ws-loading-info">
+                  <i class="fa fa-circle-o-notch fa-spin ws-loading-icon"></i>
+                  用力加载中
+              </span>
+            </div>
+            <!-- 数据列表 -->
+            <ul class="ws-list">
+                <li class="ws-list-item">
+                    <div class="item-wrap-img">
+                        <img src="img/list-img.jpg" alt="机械键盘" class="item-img">
+                    </div>
+                    <div class="item-wrap-content">
+                        <h1 class="item-title">大美新疆 | 玩遍这片大好山河，这些装备必不可少</h1>
+                        <p class="item-desc">发布时间：2019-8-18</p>
+                        <p class="item-desc">阅读1923次 | 收藏398次</p>
+                    </div>
+                </li>
+                <li class="ws-list-item">
+                    <div class="item-wrap-img">
+                        <img src="img/list-img.jpg" alt="机械键盘" class="item-img">
+                    </div>
+                    <div class="item-wrap-content">
+                        <h1 class="item-title">大美新疆 | 玩遍这片大好山河，这些装备必不可少</h1>
+                        <p class="item-desc">发布时间：2019-8-18</p>
+                        <p class="item-desc">阅读1923次 | 收藏398次</p>
+                    </div>
+                </li>
+                <li class="ws-list-item">
+                    <div class="item-wrap-img">
+                        <img src="img/list-img.jpg" alt="机械键盘" class="item-img">
+                    </div>
+                    <div class="item-wrap-content">
+                        <h1 class="item-title">大美新疆 | 玩遍这片大好山河，这些装备必不可少</h1>
+                        <p class="item-desc">发布时间：2019-8-18</p>
+                        <p class="item-desc">阅读1923次 | 收藏398次</p>
+                    </div>
+                </li>
+            </ul>
+            <!-- 上拉 loading -->
+            <div class="ws-loading-inline">
+                <span class="ws-loading-info">
+                  <i class="fa fa-long-arrow-up fa-vibrate-y ws-loading-icon"></i>
+                  上拉加载更多
+              </span>
+            </div>
+            <div class="ws-loading-inline">
+                <span class="ws-loading-info">我可是有底线的</span>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
