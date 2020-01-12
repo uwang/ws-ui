@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>严选优品-首页</title>
+    <link rel="stylesheet" href="../dist/ws-ui.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body class="page-index">
+    <div class="ws-navbar">
+        <a href="" class="navbar-item active">
+            <i class="fa fa-home icon"></i>
+            <span class="name">首页</span>
+        </a>
+        <a href="./list.html" class="navbar-item">
+            <i class="fa fa-search icon"></i>
+            <span class="name">搜索</span>
+        </a>
+        <a href="./mine.html" class="navbar-item">
+            <i class="fa fa-user-o icon"></i>
+            <span class="name">我的</span>
+        </a>
+    </div>
+    <div class="ws-content">
+        <!-- 带suggest的搜索框 -->
+        <div class="ws-search">
+            <!-- 搜索框 -->
+            <form class="ws-search-form" action="#">
+                <div class="ws-search-input-wrap">
+                    <i class="fa fa-search ws-search-icon"></i>
+                    <input type="text" class="ws-search-input" placeholder="搜索" autocomplete="off" required/>
+                    <i class="fa fa-close ws-search-clear"></i>
+                </div>
+                <span class="ws-search-cancel">取消</span>
+            </form>
+            <!-- 搜索建议 -->
+            <ul class="ws-search-suggest">
+                <li class="ws-suggest-item">手机</li>
+                <li class="ws-suggest-item">iPhone XS Max</li>
+                <li class="ws-suggest-item">华为P30</li>
+                <li class="ws-suggest-item">小米 MIX3</li>
+                <li class="ws-suggest-item">诺基亚1110</li>
+            </ul>
+        </div>
+        <!-- 网格导航 -->
+        <div class="ws-grid ws-grid-4 no-border yp-category">
+            <div class="ws-grid-item item-1">
+                <i class="fa fa-female ws-grid-icon"></i>
+                <p class="ws-grid-label">女装</p>
+            </div>
+            <div class="ws-grid-item item-2">
+                <i class="fa fa-book ws-grid-icon"></i>
+                <p class="ws-grid-label">图书</p>
+            </div>
+            <div class="ws-grid-item item-3">
+                <i class="fa fa-briefcase ws-grid-icon"></i>
+                <p class="ws-grid-label">箱包</p>
+            </div>
+            <div class="ws-grid-item item-4">
+                <i class="fa fa-diamond ws-grid-icon"></i>
+                <p class="ws-grid-label">珠宝首饰</p>
+            </div>
+            <div class="ws-grid-item item-5">
+                <i class="fa fa-soccer-ball-o ws-grid-icon"></i>
+                <p class="ws-grid-label">体育用品</p>
+            </div>
+            <div class="ws-grid-item item-6">
+                <i class="fa fa-tv ws-grid-icon"></i>
+                <p class="ws-grid-label">电视</p>
+            </div>
+            <div class="ws-grid-item item-7">
+                <i class="fa fa-mobile-phone ws-grid-icon"></i>
+                <p class="ws-grid-label">手机</p>
+            </div>
+            <div class="ws-grid-item item-8">
+                <i class="fa fa-print ws-grid-icon"></i>
+                <p class="ws-grid-label">打印设备</p>
+            </div>
+        </div>
+        <!-- 猜你喜欢列表 -->
+        <div class="ws-panel">
+            <h1 class="ws-panel-title">猜你喜欢<a href="./list.html" class="ws-panel-link">查看更多</a></h1>
+            <div class="ws-panel-body no-padding">
+                <ul class="ws-list">
+                    <li class="ws-list-item">
+                        <div class="item-wrap-img">
+                            <img src="../images/list-img.jpg" alt="机械键盘" class="item-img">
+                        </div>
+                        <div class="item-wrap-content">
+                            <h1 class="item-title">大美新疆 | 玩遍这片大好山河，这些装备必不可少</h1>
+                            <p class="item-desc">发布时间：2019-8-18</p>
+                            <p class="item-desc">阅读1923次 | 收藏398次</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $search = $('.ws-search');
+            $('.ws-search-input').focus(function() {
+                $search.addClass('on-focus');
+            });
+            $('.ws-search-cancel').click(function() {
+                $search.removeClass('on-focus');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -47,3 +47,12 @@ Flex 布局中有两个比较重要的东西，一个是弹性容器，另一个
 ### flex 盒子属性
 
 `flex: <flex-grow> <flex-shrink> <flex-basis>`
+
+## 变更记录
+
+0.1.2
+- 【Add】Panel组件的标题部分添加“查看更多”这种引导链接的样式。
+- 【Bug Fix】Search 组件指定 z-index，解决和有定位元素同时使用时的层级错乱问题。
+
+0.1.1
+- 【Initial】初始版本

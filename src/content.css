@@ -45,3 +45,9 @@
 .ws-panel-body.no-padding {
   padding: 0;
 }
+
+.ws-content .ws-panel-title>.ws-panel-link {
+  float: right;
+  margin-right: 1rem;
+  color: #aaa;
+}
