@@ -1,0 +1,65 @@
+.ws-article {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: .8rem;
+  line-height: 1.6rem;
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* 文章被折叠的情况 */
+
+.ws-article.fold {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+
+/* 展开按钮 */
+
+.ws-article .ws-article-unfold-btn {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e0652f;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 100%);
+}
+
+.ws-article.fold .ws-article-unfold-btn {
+  display: block;
+}
+
+.ws-article .ws-article-title {
+  margin: .5rem 0 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.ws-article .ws-article-info {
+  font-size: .8rem;
+  color: #aaa;
+}
+
+.ws-article .ws-article-subtitle {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.ws-article .ws-article-paragraph {
+  margin: .5rem 0 1rem;
+}
+
+.ws-article .ws-article-img {
+  max-width: 100%;
+  margin: auto;
+}

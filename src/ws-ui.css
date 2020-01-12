@@ -69,3 +69,7 @@
 /* aciton sheet 样式 */
 
 @import './actionsheet.css';
+
+/* 文章组件样式 */
+
+@import './article.css';
