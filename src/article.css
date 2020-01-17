@@ -60,6 +60,7 @@
 }
 
 .ws-article .ws-article-img {
+  display: block;
   max-width: 100%;
   margin: auto;
 }
