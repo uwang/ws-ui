@@ -5,11 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>我的</title>
+    <title>个人中心页面</title>
+    <link rel="stylesheet" href="../dist/ws-ui.min.css">
+    <link rel="stylesheet" href="./mine.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body class="page-mine">
-    <div class="ws-content"></div>
+    <div class="ws-navbar">
+        <a href="./index.html" class="navbar-item active">
+            <i class="fa fa-home icon"></i>
+            <span class="name">首页</span>
+        </a>
+        <a href="./list.html" class="navbar-item">
+            <i class="fa fa-search icon"></i>
+            <span class="name">搜索</span>
+        </a>
+        <a href="./mine.html" class="navbar-item">
+            <i class="fa fa-user-o icon"></i>
+            <span class="name">我的</span>
+        </a>
+    </div>
+
+    <div class="ws-content">
+        <div class="ws-panel-body user">
+            <img class="portrait" src="./img/list-img.jpg" alt="用户头像">
+            <div class="info">
+                <h2 class="nick-name">Rosen</h2>
+                <p class="detail">
+                    <a href="#" class="detail-item">关注 99999</a>
+                    <a href="#" class="detail-item">收藏 9999万</a>
+                </p>
+            </div>
+        </div>
+        <!-- 菜单区域 -->
+        <div class="ws-panel-body no-padding">
+            <div class="ws-menu">
+                <a href="#" class="ws-menu-item">
+                    <p class="ws-menu-name">我的钱包</p>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+                <a href="#" class="ws-menu-item">
+                    <p class="ws-menu-name">我的文章</p>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+                <a href="#" class="ws-menu-item">
+                    <p class="ws-menu-name">访问统计</p>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+                <a class="ws-menu-item">
+                    <p class="ws-menu-name">我的推广码</p>
+                    <i class="fa fa-qrcode ws-menu-value"></i>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+                <a class="ws-menu-item">
+                    <p class="ws-menu-name">接收新消息</p>
+                    <input class="ws-switch" type="checkbox" checked>
+                </a>
+            </div>
+        </div>
+        <div class="ws-panel-body no-padding">
+            <div class="ws-menu">
+                <a href="#" class="ws-menu-item">
+                    <p class="ws-menu-name">设置</p>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+                <a href="#" class="ws-menu-item">
+                    <p class="ws-menu-name">意见反馈</p>
+                    <i class="fa fa-chevron-right ws-menu-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ws-panel-body no-padding">
+            <span class="ws-btn ws-btn-large logout-btn">退出登录</span>
+        </div>
+    </div>
+
+    <!-- 显示我的推广二维码 -->
+    <div class="ws-modal">
+        <!-- 需要打开二维码时，在ws-modal上添加“show”这个类即可 -->
+        <div class="ws-mask"></div>
+        <div class="ws-modal-wrap">
+            <div class="ws-modal-body no-padding">
+                <img src="./img/qrcode.jpg" alt="" class="ws-modal-img">
+            </div>
+            <i class="fa fa-close ws-modal-close"></i>
+        </div>
+    </div>
+
+    <!-- 确认关闭新消息提醒 -->
+    <div class="ws-action-sheet">
+        <!-- 需要打开弹窗时，添加“show”这个类即可 -->
+        <!-- <div class="ws-action-sheet show"> -->
+        <div class="ws-mask"></div>
+        <div class="ws-action-sheet-wrap">
+            <div class="ws-action-sheet-header">
+                <h1 class="ws-action-sheet-title">关闭该功能后，您将不再收到新消息的通知，确定要这样做吗？</h1>
+            </div>
+            <div class="ws-action-sheet-body">
+                <a class="ws-action-sheet-menu" id="js-close-message">关闭新消息提醒</a>
+            </div>
+            <div class="ws-action-sheet-footer">
+                <a class="ws-action-sheet-menu" id="js-cancel">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.fa-qrcode').click(function() {
+                $('.ws-modal').addClass('show');
+            });
+            $('.ws-modal-close').click(function() {
+                $('.ws-modal').removeClass('show');
+            });
+
+            $('.ws-switch').change(function() {
+                if (!$(this).prop('checked')) {
+                    $('.ws-action-sheet').addClass('show');
+                }
+            });
+            $('#js-close-message').click(function() {
+                $('.ws-action-sheet').removeClass('show');
+            });
+            $('#js-cancel').click(function() {
+                $('.ws-switch').prop('checked', true);
+                $('.ws-action-sheet').removeClass('show');
+            });
+        })
+    </script>
 </body>
 
 </html>
